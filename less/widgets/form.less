@@ -1,0 +1,83 @@
+
+// -----------------------------------------
+// Row Template: Form Row
+// -----------------------------------------
+
+
+label {
+	color: @color__h1--text;
+	font-family: "futura-pt", helvetica neue, sans-serif;
+	font-size: 20px;
+    font-weight: @font__h1--font-weight;
+	line-height: 26px;
+	margin-bottom: 12px;
+	position: relative;
+	transition: all 0.75s ease;
+}
+
+
+.form-group {
+    margin-bottom: 25px;
+    position: relative;
+
+
+    // Removes border
+    &:last-child:after,
+    &.js-recaptcha {
+        display: none;
+    }
+}
+
+
+input,
+input[type="search"],
+input[type="email"],
+input[type="password"],
+textarea,
+.input--single-line {
+	background-color: transparent;
+    color: lighten(@color__p--text, 100%);
+    border: 3px solid white;
+    font-family: "futura-pt", helvetica neue, sans-serif;
+    font-size: 18px;
+    font-weight: @font__p--font-weight;
+    line-height: 28px;
+    outline: none;
+    padding: 15px;
+    position: relative;
+    .transition(border-color 0.5s ease);
+    width: 100%;
+
+    &:focus,
+    &:active,
+    &:hover {
+        border-color: @color__secondary;
+        box-shadow: none;
+        outline: none;
+    }
+
+    &::-webkit-input-placeholder {
+        color: @color__body--background;
+    }
+
+
+    &::-moz-placeholder {
+        color: @color__body--background;
+    }
+
+
+    &:-ms-input-placeholder {
+        color: @color__body--background;
+    }
+
+
+    &::placeholder {
+        color: transparent;
+    }
+}
+
+.button--submit,
+.button--submit:before {
+    background-color: @color__secondary!important;
+    border: none!important;
+}

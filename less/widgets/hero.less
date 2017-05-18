@@ -1,0 +1,176 @@
+
+// -----------------------------------------
+// Row Template: Hero Row
+// -----------------------------------------
+
+
+
+
+// Hero Row
+[data-name="row"]:nth-child(2) {
+    overflow: hidden;
+
+
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        right: 0;
+        transform: skewY(-5deg);
+        transform-origin: 0;
+    }
+
+    &:before {
+        background-image: linear-gradient(to right, @color__secondary 0%, spin(@color__secondary, 7) 19%, spin(@color__secondary, 14) 60%, spin(@color__secondary, 40) 100%);
+        height: 100vh;
+        left: 0;
+        top: 0;
+        width: 100%;
+   }
+
+    &:after {
+        background-color: spin(@color__secondary, 18);
+        right: 0;
+        top: 0;
+        height: 125px;
+        width: 40%;
+
+        @media only screen and (max-width: 700px) {
+            height: 85px;
+            width: 65%;
+        }
+    }
+
+
+    h1,
+    p {
+        color: @color__h1--text;
+    }
+
+
+   .row {
+        background-color: white !important;
+        background-image: none!important;
+   }
+
+
+    // Row container
+    .row__container {
+
+
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+            transform: skewY(-5deg);
+            transform-origin: 0;
+        }
+
+        &:before {
+            background-color: spin(@color__secondary, 15);
+            left: 0;
+            top: 0;
+            height: 125px;
+            width: 50%;
+
+            @media only screen and (max-width: 700px) {
+                display: none;
+                visibility: hidden;
+            }
+        }
+
+
+        &:after {
+            background-image: linear-gradient(to right, darken(@color__secondary, 1) 0%, darken(@color__secondary, 2) 19%, spin(@color__secondary, 14) 60%, spin(@color__secondary, 28) 100%);
+            bottom: 0;
+            left: 0;
+            height: 140px;
+            width: 40%;
+
+            @media only screen and (max-width: 700px) {
+            height: 100px;
+            width: 65%;
+            }
+        }
+    }
+
+
+    // Add max width to content
+    .widget {
+        max-width: 650px;
+        z-index: 3;
+
+        @media only screen and (max-width: 1024px) {
+            max-width: 550px;
+        }
+
+        @media only screen and (max-width: 700px) {
+            max-width: 100%;
+        }
+    }
+
+
+    h1 {
+        font-family: "futura-pt", sans-serif;
+        font-size: 92px;
+        font-weight: 700;
+        letter-spacing: -2px;
+        line-height: 0.9;
+        margin: 0;
+
+        @media only screen and (max-width: 860px) {
+            font-size: 70px;
+        }
+
+        @media only screen and (max-width: 700px) {
+            font-size: 62px;
+        }
+    }
+
+
+    p {
+        font-family: "futura-pt", sans-serif;
+        font-size: 23px;
+        font-weight: 400;
+        line-height: 1.4;
+        margin: 0;
+
+        @media only screen and (max-width: 700px) {
+            font-size: 20px;
+        }
+    }
+
+
+    .button {
+        background: white;
+        border: 0;
+        border-radius: 4px;
+        box-shadow: 0 0 50px fade(@color__primary, 10%);
+        color: @color__secondary;
+        font-family: "futura-pt", sans-serif;
+        font-size: 15px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        outline: 0;
+        margin-top: 0;
+        padding: 18px 25px;
+        text-transform: uppercase;
+        transform: scale(1);
+        transition: box-shadow .35s ease, transform .35s ease;
+        will-change: transition;
+
+        @media only screen and (max-width: 700px) {
+            font-size: 14px;
+            margin-top: 15px;
+            padding: 15px 20px;
+        }
+
+        &:hover,
+        &:active,
+        &:focus {
+            box-shadow: 0 0 50px fade(@color__primary, 25%);
+            cursor: pointer;
+            transform: scale(1.02);
+        }
+    }
+}

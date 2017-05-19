@@ -28,13 +28,18 @@
 
 // Accent Colours
 .row--accent {
-    background-color: #3a3a51;
+    background-color: #f9495a;
 
     h1,
     h2,
     h3,
     p {
         color: lighten(@color__p--text, 80%);
+    }
+
+    h2:after, h3:after {
+        background-image: none;
+        background-color: white;
     }
 }
 

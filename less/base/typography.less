@@ -78,31 +78,33 @@ h1 {
 }
 
 
-h2,
-h3 {
-    display: inline-block;
+.row--light {
+    h2,
+    h3 {
+        display: inline-block;
 
-    &:after {
-        background-image: linear-gradient(to right, @color__secondary 0%, spin(@color__secondary, 7) 19%, spin(@color__secondary, 14) 60%, spin(@color__secondary, 40) 100%);
-        content: "";
-        display: block;
-        position: relative;
-        height: 5px;
-        margin-top: 4px;
-        width: 100%;
-    }
-
-
-    &[style="text-align: center;"]:before,
-    &[style="text-align: center;"]:after {
-        margin-left: auto;
-        margin-right: auto;
-    }
+        &:after {
+            background-image: linear-gradient(to right, @color__secondary 0%, spin(@color__secondary, 7) 19%, spin(@color__secondary, 14) 60%, spin(@color__secondary, 40) 100%);
+            content: "";
+            display: block;
+            position: relative;
+            height: 5px;
+            margin-top: 4px;
+            width: 100%;
+        }
 
 
-    &[style="text-align: right;"]:before,
-    &[style="text-align: right;"]:after {
-        margin-left: auto;
+        &[style="text-align: center;"]:before,
+        &[style="text-align: center;"]:after {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+        &[style="text-align: right;"]:before,
+        &[style="text-align: right;"]:after {
+            margin-left: auto;
+        }
     }
 }
 
